@@ -1,5 +1,4 @@
-# 這是一個太空旅遊介紹網站(This is a space tourism website)
-
+# 這是一個太空旅遊網站(This is a space tourism website)
 簡介:
 
 就算我們不抬頭仰望，星空也永遠注視著我們，等待著我們去發掘宇宙的奧秘。是時候來一段奇幻的星際旅程吧 !
