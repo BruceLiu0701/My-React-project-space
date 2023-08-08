@@ -1,0 +1,26 @@
+.space-bank{
+    width: 100%;
+}
+.space-bank p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0 1.5rem 0;
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 1px dashed #fff;
+    letter-spacing: 0.05rem;
+
+    margin-bottom: 1rem;
+}
+.space-bank p input{
+    margin-right: 1rem;
+}
+
+/* RWD設定 */
+@media screen and (max-width:550px){
+    .space-bank p{
+        font-size: 14px;
+        line-height: 18px;
+    }
+}

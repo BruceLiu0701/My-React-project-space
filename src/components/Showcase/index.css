@@ -1,0 +1,131 @@
+.space-showcase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-padding-top: 2rem;
+}
+.space-showcase div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 2px solid #fff;
+}
+.space-showcase div img{
+    width: 100%;
+}
+
+/* 幻燈片按鈕區 */
+.space-showcase div button{
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    transform: translateY(-50%);
+    top: 50%;
+}
+.space-showcase div button:first-of-type{
+    right:0;
+}
+.space-showcase div button:last-of-type{
+    left:0.5rem;
+}
+.space-showcase div button span{
+    font-size: 46px;
+    line-height: 60px;
+    text-align: center;
+}
+.space-showcase div button:hover{
+    color:var( --color-login) ;
+}
+
+/* 動畫區 */
+.scale-in-hor-left {
+	-webkit-animation: scale-in-hor-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-hor-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.scale-in-hor-right {
+	-webkit-animation: scale-in-hor-right 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-hor-right 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-hor-left {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-hor-left {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+  }
+
+
+  @-webkit-keyframes scale-in-hor-right {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-hor-right {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+
+
+/* RWD設定 */
+@media screen and (max-width:550px){
+    .space-showcase div{
+        border: 1px solid #fff;
+    }
+    .space-showcase div button span{
+        font-size: 36px;
+        line-height: 48px;
+    }
+}

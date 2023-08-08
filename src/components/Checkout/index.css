@@ -1,0 +1,312 @@
+.space-checkout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.space-checkout-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+/* 購票資訊區塊 */
+.space-checkout-ticket{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2.5rem 2rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-mardrin);
+
+    border: 1px solid #fff;
+}
+/* 購買資訊標題 */
+.space-checkout-ticket h3{
+    width: 100%;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    position: relative;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1rem;
+    color: var(--color-login);
+}
+.space-checkout-ticket h3:after{
+    content: "";
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    position: absolute;
+    left:0;
+    bottom: -0.5rem;
+}
+/* 多個小標題 */
+.space-checkout-ticket-title{
+    width: 100%;
+    display: grid;
+    grid-template-columns:25% 25% 36% 7% 7%;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.space-checkout-ticket-title p{
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+}
+.space-checkout-ticket-title p:nth-of-type(n+4){
+    text-align: center;
+}
+.space-checkout-ticket-title:after{
+    content: "";
+    border-bottom: 1px dashed #fff;
+    width: 100%;
+    position: absolute;
+    left:0;
+    bottom: -0.5rem;
+}
+/* 詳細內容區 */
+.space-checkout-ticket-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns:25% 25% 36% 7% 7% ;
+    margin-bottom: 1rem;
+}
+.space-checkout-ticket-content p{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+}
+.space-checkout-ticket-content p:nth-of-type(n+3){
+    text-align: center;
+}
+.space-checkout-ticket-content div{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+.space-checkout-ticket-content div p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.space-checkout-ticket-content div p+p{
+    margin-left: 2rem;
+}
+.space-checkout-ticket-content div p span:first-child{
+    color: #8CE600;
+}
+
+/* 付款方式區塊 */
+.space-checkout-howtopay{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2.5rem 2rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-mardrin);
+
+    border: 1px solid #fff;
+}
+.space-checkout-howtopay-method{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.space-checkout-howtopay-method::after{
+    width: 100%;
+    content: "";
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+}
+.space-checkout-howtopay-method h3{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    margin-right: 2rem;
+    color: var(--color-login);
+}
+.space-checkout-howtopay-method-btn{
+    text-align: left;
+}
+
+/* 付款方式三個按鈕 */
+.space-checkout-howtopay-method-btn button{
+    font-family: var(--font-mardrin);
+    padding: 0.5rem 0.5rem;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    cursor: pointer;
+}
+.space-checkout-howtopay-method-btn button+button{
+    margin-left: 0.5rem;
+}
+/* 總金額區塊 */
+.space-checkout-howtopay .space-checkout-howtopay-totalprice{
+    width: 100%;
+    text-align: end;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+/* 確認訂票按鈕區 */
+.space-checkout-howtopay-btn{
+    width: 100%;
+    text-align: end;
+}
+.space-checkout-howtopay-btn button{
+    font-family: var(--font-mardrin);
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+    cursor: pointer;
+}
+.space-checkout-howtopay button:hover{
+    background:var(--gradient-btn);
+    color: #fff;
+}
+
+/* 650 隱藏區塊 */
+.space-checkout-ticket-container{
+    display: none;
+}
+.space-checkout-ticket-sixzero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.space-checkout-ticket-sixzero p{
+    font-family: var(--font-mardrin);
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+}
+.space-checkout-ticket-sixzero p+p{
+    margin-top: 1rem ;
+}
+.space-checkout-ticket-sixzero p span{
+    font-size: 16px;
+    color:var(--color-login);
+}
+/* 隱藏區塊旅客資訊 */  
+.space-checkout-ticket-sixzero div{
+    margin: 1rem 0;
+}
+.space-checkout-ticket-sixzero div p{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.space-checkout-ticket-sixzero div p span{
+    font-size: 14px;
+    color: #fff;
+}
+.space-checkout-ticket-sixzero div p+p{
+    margin-top: 1rem;
+}
+.space-checkout-ticket-sixzero div p span:first-child{
+    color:#8CE600;
+}
+
+
+/* RWD設定 */
+@media screen and (max-width:1500px){
+    .space-checkout-ticket-content div{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .space-checkout-ticket-content div p+p{
+        margin: 1.5rem 0 0;
+    }
+    .space-checkout-ticket-title{
+        grid-template-columns: 25% 25% 25% 12% 13%;
+    }
+    .space-checkout-ticket-content{
+        grid-template-columns: 25% 25% 25% 12% 13%;
+    }
+}
+@media screen and (max-width:1250px){
+    .space-checkout-ticket{
+        width: 90%;
+    }
+    .space-checkout-howtopay{
+        width: 90%;
+    }
+}
+@media screen and (max-width:950px){
+    .space-checkout-ticket{
+        width: 100%;
+    }
+    .space-checkout-howtopay{
+        width: 100%;
+    }
+}
+@media screen and (max-width:850px){
+    .space-checkout-ticket-title p{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .space-checkout-ticket-content p{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .space-checkout-ticket h3,
+    .space-checkout-howtopay-method h3{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .space-checkout-howtopay .space-checkout-howtopay-totalprice{
+        font-size: 20px;
+        line-height: 28px
+    }
+}
+@media screen and (max-width:650px){
+    .space-checkout-ticket-title,
+    .space-checkout-ticket-content{
+        display: none;
+    }
+    .space-checkout-ticket-container{
+        display: block;
+    }
+    .space-checkout-ticket{
+        padding: 2rem 1.5rem;
+    }
+}
+@media screen and (max-width:550px){
+   .space-checkout-howtopay-method{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+   }
+   .space-checkout-howtopay-method h3{
+    margin:0 0 1.0rem 0;
+    }
+    .space-checkout-howtopay .space-checkout-howtopay-totalprice{
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 1.5rem;
+    }
+    .space-checkout-howtopay-btn button,
+    .space-checkout-howtopay-method-btn button{
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

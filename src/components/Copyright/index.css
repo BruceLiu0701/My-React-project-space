@@ -1,0 +1,19 @@
+.space-copyright{
+    color: #fff;
+    padding: 1.3rem 1rem;
+    text-align: center;
+}
+.space-copyright p{
+    font-family: var(--font-mardrin);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.05rem;
+}
+
+@media screen and (max-width:650px){
+    .space-copyright p{
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

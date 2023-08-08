@@ -1,0 +1,136 @@
+.space-credit{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem 0 1.5rem 0;
+    border-bottom: 1px dashed #fff;
+
+    margin-bottom: 1rem;
+}
+/* 左側標題 */
+.space-credit-title{
+    margin-right:4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.space-credit-title h3{
+    font-family: var(--font-mardrin);
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    color: var(--color-login);
+}
+/* 右方新增信用卡資料區塊 */
+.space-credit-newcard{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.space-credit-newcard button{
+    font-family: var(--font-mardrin);
+    padding: 0.5rem 0.5rem;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    cursor: pointer;
+
+    margin-bottom: 1.5rem;
+}
+.space-credit-newcard button+button{
+    margin-left: 1.0rem;
+}
+/* 信用卡資料輸入框 */
+.space-credit-newcard-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.space-credit-newcard-data p{
+    font-size: 18px;
+    line-height: 24px;
+    text-align: start;
+    margin-bottom: 1rem;
+}
+.space-credit-newcard-data input{
+    width: 280px;
+    font-size: 14px;
+    padding: 0.5rem;
+}
+.space-credit-newcard-data input+input{
+    margin-top: 1rem;
+}
+.space-credit-newcard-data input:focus{
+    outline: none;
+}
+
+/* 信用卡資料送出按鈕 */
+.space-credit-newcard-data button{
+    font-family: var(--font-mardrin);
+    padding: 0.5rem 0.5rem;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    cursor: pointer;
+
+    margin-top: 1rem;
+    align-self: flex-end;
+}
+/* 新增完的卡片 */
+.space-credit-newcard-another-box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.space-credit-newcard-another-box input{
+    margin-right: 1rem;
+}
+.space-credit-newcard-another{
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.space-credit-newcard-another p{
+    color: #fff;
+    font-size: 16px;
+    line-height: 22px;
+    height: 100%;
+}
+.space-credit-newcard-another:hover{
+    border:1px solid var(--color-login);
+}
+
+
+/* RWD設定 */
+@media screen and (max-width:850px){
+    .space-credit-title h3{
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+@media screen and (max-width:650px){
+    .space-credit-title{
+        margin:0 0 1.0rem 0;
+    }
+    .space-credit{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .space-credit-newcard-data input{
+        width: 260px;
+    }
+    .space-credit-newcard-data button{
+        font-size: 14px;
+        line-height: 18px;
+    }
+}

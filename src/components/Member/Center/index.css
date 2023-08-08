@@ -1,0 +1,136 @@
+.space-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid #fff;
+    padding: 3rem 2.5rem;
+    border-radius: 1rem;
+    color: #fff;
+    backdrop-filter: blur(4px);
+
+    width: 800px;
+    font-family: var(--font-mardrin);
+}
+.space-center div:first-of-type{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+    margin-bottom: 2.0rem;
+}
+/* 標題區塊 */
+.space-center div h2{
+    font-size: 32px;
+    line-height: 48px;
+    background: linear-gradient(90deg, rgba(201, 204, 207, 1) 34%, rgba(213, 193, 15, 1) 100%);
+    background-clip: text;
+    color:transparent;
+}
+.space-center div span{
+    font-size: 16px;
+    line-height: 20px;
+}
+/* 底下內文區塊 */
+.space-center p{
+    letter-spacing: 0.05rem;
+}
+.space-center p:first-of-type{
+    font-size: 18px;
+    line-height: 26px;
+    position: relative;
+    padding: 1rem 0;
+}
+.space-center p:first-of-type::before{
+    content: "";
+    width: 100%;
+    border-top:1px solid #fff;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.space-center p:nth-of-type(2){
+    position: relative;
+    width: 100%;
+}
+.space-center p:nth-of-type(2)::after{
+    content: "";
+    width: 100%;
+    border-bottom: 1px dashed #fff;
+    position: absolute;
+    left: 0;
+    bottom:-1rem;
+}
+.space-center p+p{
+    margin-top: 2rem;
+}
+.space-center p:last-of-type{
+    width: 100%;
+    color:#8CE600 ;
+    margin-bottom: 3rem;
+}
+/* 登出按鈕區塊 */
+.space-center-btn{
+    width: 100%;
+    text-align: right;
+}
+.space-center-btn button{
+    font-family: var(--font-mardrin);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    background:linear-gradient(90deg, rgba(198, 17, 200, 1) 24%, rgba(52, 54, 100, 1) 100%);
+}
+.space-center-btn button:hover{
+    color: var(--color-login);
+}
+
+/* RWD設定 */
+@media screen and (max-width:950px){
+    .space-center div h2{
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+@media screen and (max-width:850px){
+    .space-center div:first-of-type{
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .space-center div h2{
+        /* width: 100%; */
+        margin-bottom: 1.5rem;
+    }
+}
+@media screen and (max-width:650px){
+    .space-center div h2{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .space-center p:first-of-type{
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
+@media screen and (max-width:550px){
+    .space-center div h2{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .space-center p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+@media screen and (max-width:450px){
+    .space-center{
+        padding: 2rem 1.5rem;
+    }
+}

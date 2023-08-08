@@ -1,0 +1,176 @@
+.space-banner{
+    height: 100vh;
+    background: url('../../assets/universe.jpg')  no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.space-banner-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 左側大標題 按鈕區 */
+.space-banner-title-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin-right: 5rem;
+}
+.space-banner-title-container h1{
+    font-family: var(--font-english);
+    font-size: 66px;
+    font-weight: 800;
+    line-height: 80px;
+    background: linear-gradient(90deg, rgba(201, 204, 207, 1) 34%, rgba(213, 193, 15, 1) 100%);
+    background-clip: text;
+    color:transparent;
+    letter-spacing: -0.05rem;
+
+    margin-bottom: 3rem;
+}
+.space-banner-title-container p{
+    font-family: var(--font-mardrin);
+    font-size: 22px;
+    font-weight: 500;
+    line-height:36px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+/* 右方圖片區 */
+.space-banner-image{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.space-banner-image img{
+    width:100% ;
+    height: 100%;
+}
+/* 最下方Get started區塊 */
+.space-banner-start-btn{
+    margin-top: 5rem;
+}
+.space-banner-start-btn button{
+    background:var(--gradient-btn);
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-family: var(--font-english);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 10px #000;
+}
+.space-banner-start-btn button:hover{
+    color:#FFD700;
+    -webkit-animation: jello-horizontal 0.9s both;
+	animation: jello-horizontal 0.9s both;
+}
+
+/* 按鈕動畫 */
+@-webkit-keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+}
+  @keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+}
+
+/* RWD設定 */
+@media screen and (max-width:1050px){
+    .space-banner-title{
+        flex-direction: column;
+    }
+    .space-banner-image{
+        margin-top: 5rem;
+    }
+    .space-banner-title-container{
+        margin: 0;
+    }
+}
+@media screen and (max-width:750px){
+    .space-banner-title-container h1{
+        font-size: 48px;
+        line-height: 60px;
+    }
+    .space-banner-title-container p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+@media screen and (max-width:550px){
+    .space-banner-title-container h1{
+        font-size: 40px;
+        line-height: 52px;
+    }
+    .space-banner-title-container p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .space-banner-start-btn button{
+        font-size: 18px;
+        padding: 0.8rem 1.6rem;
+    }
+}

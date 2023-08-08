@@ -1,0 +1,128 @@
+.space-passenger{
+    flex: 2.5;                    /* 分配相同比例, 讓三個組件flex都相同比例 */
+    display: flex;
+    justify-content: flex-start;  /* 讓購票者欄位靠左 */
+    align-items: center;
+
+    padding: 2rem 1rem;
+}
+/* 購票者資訊容器 */
+.space-passenger-information{
+    width: 60%;                   /* 靠左佔60% */
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 1rem ;
+    /* background: linear-gradient(90deg, rgba(17, 114, 200, 1) 12%, rgba(52, 54, 100, 1) 100%); */
+    background: var(--gradient-bg);
+
+    padding: 2rem 2rem;
+}
+/* 購票者資訊標題 */
+.space-passenger-information h3{
+    font-family: var(--font-mardrin);
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    margin-bottom: 2rem;
+}
+/* 各個input框 */
+.space-passenger-information input{
+    padding: 0.7rem 1.0rem;
+    font-size: 16px;
+    border: none;
+    width: 80%;
+}
+.space-passenger-information input:focus{
+    outline: none;
+}
+.space-passenger-information input{
+    margin-bottom: 1.5rem;
+}
+/* 選擇人數 */
+.space-passenger-information-select{
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+.space-passenger-information-select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-mardrin);
+}
+.space-passenger-information-select label{
+    margin-right: 1rem;
+    font-size: 18px;
+}
+.space-passenger-information p{
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-mardrin);
+    color:#fff;
+}
+/* 按鈕區塊 */
+.space-passenger-information-btn button{
+    font-family: var(--font-mardrin);
+    padding: 0.3rem 2.5em;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 0.5rem;
+    text-align: left;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.space-passenger-information-btn button:hover{
+    background:var(--gradient-btn);
+    color: #fff;
+}
+
+/* RWD設定*/
+@media screen and (max-width:1350px){
+    .space-passenger-information{
+        width: 70%;
+    }
+    .space-passenger-information input{
+        width: 90%;
+    }
+}
+@media screen and (max-width:1050px){
+    .space-passenger-information{
+        width: 80%;
+    }
+}
+@media screen and (max-width:850px){
+    .space-passenger{
+        justify-content: center;
+    }
+    .space-passenger-information h3{
+        font-size: 20px;
+        line-height: 28px
+    }
+    .space-passenger-information-select label{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .space-passenger-information p{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .space-passenger-information-btn button{
+        font-size: 16px;
+        line-height: 20px;
+        padding: 0.3rem 2.0em;
+    }
+}
+@media screen and (max-width:550px){
+    .space-passenger-information{
+        width: 100%;
+    }
+    .space-passenger-information input{
+        padding: 0.6rem 1rem;
+        width: 100%;
+        font-size: 14px;
+    }
+}

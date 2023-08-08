@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--color-bg); /*整個body的背景色*/
+}
+a{
+    color: unset;
+    text-decoration: none;
+}
+.section-padding{
+    padding: 4rem 6rem;
+}
+.section-margin{
+    margin: 5rem 6rem;
+}
+/* 用於NavLink的點擊後維持字體變色效果 */
+.active{
+    color: var(--color-login);
+}
+
+.app{
+    width:100vw;
+}
+/* 返回最上方按鈕 */
+.totop{
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #00FA9A;
+    color: #00FA9A;
+    position: fixed;
+    bottom:5rem;
+    left:2rem;
+    text-align: center;
+}
+.totop a{
+    display:inline-block;
+}
+.totop span{ 
+    font-size: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.totop:hover{
+    border: 2px solid var(--color-login);
+    color: var(--color-login);
+}
+
+@media screen and (max-width:1050px){
+    .section-padding{
+        padding: 4rem ;
+    }
+    .section-margin{
+        margin: 4rem ;
+    }
+}
+@media screen and (max-width:650px){
+    .section-padding{
+        padding: 4rem 2rem ;
+    }
+    .section-margin{
+        margin: 4rem 2rem;
+    }
+}
+@media screen and (max-width:550px){
+    .totop{
+        width: 50px;
+        height: 50px;
+    }
+    .totop span{ 
+        font-size: 26px;
+    }
+
+}

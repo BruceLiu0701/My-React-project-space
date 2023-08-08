@@ -1,0 +1,235 @@
+.space-cart{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: var(--color-footer);
+    width: 330px;
+    top:100%;
+    right:0;
+    padding:2rem ;
+    border-radius: 0.5rem;
+    font-family: var(--font-mardrin);
+
+    color: #fff;
+}
+/* 訪客您好標題 */
+.space-cart h3{
+    width: 100%;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    position: relative;
+    color: var(--color-login);
+}
+.space-cart h3::after{
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    bottom: -1rem;
+    left: 0;
+}
+/* 旅程區塊與出發地點區塊div內 */
+.space-cart-ticket,
+.space-cart-departure{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.space-cart-ticket::after,
+.space-cart-departure::after{
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    bottom: -1rem;
+    left: 0;
+}
+.space-cart-ticket h4,
+.space-cart-departure h4{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--color-login);
+    letter-spacing: 0.05rem;
+}
+.space-cart-ticket p,
+.space-cart-departure p{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+/* 重新選擇按鈕 */
+.space-cart-ticket button,
+.space-cart-departure button{
+    font-family: var(--font-mardrin);;
+    padding: 0.3rem 1em;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.space-cart-ticket button:hover,
+.space-cart-departure button:hover{
+    background:var(--gradient-btn);
+    color: #fff;
+}
+/* 旅客資料部分 */
+.space-cart-passenger{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.space-cart-passenger::after{
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    bottom: -1rem;
+    left: 0;
+}
+.space-cart-passenger h4{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--color-login);
+    letter-spacing: 0.05rem;
+}
+/* 內文資訊 */
+.space-cart-passenger-information p{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    text-shadow: 0 0 5px #000;
+    margin-bottom: 1.5rem;
+}
+.space-cart-passenger-information p span{
+    color: 	#8CE600;
+}
+/* 重新填寫旅客資訊按鈕 */
+.space-cart-passenger button{
+    font-family: var(--font-mardrin);;
+    padding: 0.3rem 1em;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.space-cart-passenger button:hover{
+    background:var(--gradient-btn);
+    color: #fff;
+}
+
+/* 動畫區塊 */
+.slide-left {
+	-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/* 最下方關閉購物袋按鈕區塊*/
+.space-cart-price,
+.space-cart-clear{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.space-cart-price{
+    margin-bottom: 1.5rem;
+}
+.space-cart-price::after{
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    bottom: -1rem;
+    left: 0;
+}
+.space-cart-price p:first-child,
+.space-cart-clear p:first-child{
+    flex:1;
+}
+.space-cart-price p:last-child,
+.space-cart-clear p:last-child{
+    flex:1;
+    text-align: center;
+    cursor: pointer;
+}
+.space-cart-price p:last-child button{
+    font-family: var(--font-mardrin);;
+    padding: 0.3rem 1em;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.space-cart-price p:last-child button:hover{
+    background:var(--gradient-btn);
+    color: #fff;
+}
+.space-cart-clear button{
+    font-family: var(--font-mardrin);;
+    padding: 0.3rem 1em;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.space-cart-clear button:hover{
+    background:var(--gradient-btn);
+    color: #fff;
+}
+
+
+@-webkit-keyframes slide-left {
+    0% {
+        -webkit-transform: translateX(100px);
+              transform: translateX(100px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+            transform: translateX(0);
+    }
+}
+    @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(100px);
+              transform: translateX(100px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+}
+
+/* RWD設定 */
+
+@media screen and (max-width:550px){
+    .space-cart h3{
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

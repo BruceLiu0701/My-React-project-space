@@ -1,0 +1,108 @@
+.space-register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #fff;
+    padding: 3rem 2.5rem;
+    border-radius: 1rem;
+    color: #fff;
+    backdrop-filter: blur(4px);
+
+    width: 400px;
+}
+.space-register h3{
+    font-family: var(--font-mardrin);
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+
+    margin-bottom: 2rem;
+}
+.space-register-user{
+    width: 100%;
+    position: relative;
+    margin-bottom: 2rem;
+}
+/* input框區塊 */
+.space-register-user input{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.space-register-user input:focus{
+    outline: none;
+}
+
+.space-register-user div{
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+}
+.space-register-user div p{
+    font-size: 13px;
+    line-height: 1rem;
+    display: none;
+}
+.space-register-user input:focus+div p{
+    font-family: var(--font-mardrin);
+    display: block;
+    color: #f00;
+    font-weight: 500;
+    text-shadow: 0 0 1px #000;
+}
+.space-register-user input:focus+div{
+    margin-bottom: 0.5rem;
+}
+/* 加入會員按鈕 */
+.space-register-btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.space-register-btn button{
+    flex: 0.5;
+    font-family: var(--font-mardrin);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    background:linear-gradient(90deg, rgba(198, 17, 200, 1) 24%, rgba(52, 54, 100, 1) 100%);
+}
+.space-register-btn button:hover{
+    color: var(--color-login);
+}
+/* 點我登入span */
+.space-register-btn span{
+    cursor: pointer;
+}
+.space-register-btn span:hover{
+    color: var(--color-login);
+}
+/* RWD設定*/
+@media screen and (max-width:550px){
+    .space-register-btn{
+        font-size: 15px;
+    }
+    .space-register-btn button{
+        flex: 0.8;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 0.5rem;
+    }
+    .space-register-login h3{
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .space-register-login{
+        padding: 3rem 2rem;
+    }
+}

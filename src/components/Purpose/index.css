@@ -1,0 +1,140 @@
+.space-purpose{
+    background: linear-gradient(90deg, rgba(17, 114, 200, 1) 12%, rgba(52, 54, 100, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+/* 上方頭像與右方大標題文字區 */
+.space-purpose-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+/* 頭像區 */
+.space-purpose-container-image{
+    /* width:40%; */
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-right: 2.5rem;
+    padding: 1.5rem;
+}
+.space-purpose-container-image img{
+    width: 90%;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 25px var(--color-footer);
+}
+.space-purpose-container-image h3{
+    font-family: var(--font-english);
+    font-weight: 700;
+    font-size: 28px;
+    background: linear-gradient(90deg, rgba(201, 204, 207, 1) 23%, rgba(213, 193, 15, 1) 100%);
+    background-clip: text;
+    color:transparent;
+}
+/* 大標題文字區*/
+.space-purpose-container-text{
+    flex:1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.space-purpose-container-text h1{
+    font-family: var(--font-mardrin);
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, rgba(201, 204, 207, 1) 23%, rgba(213, 193, 15, 1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+.space-purpose-container-text p{
+    font-family: var(--font-mardrin);
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #ddd;
+    letter-spacing: 0.05rem;
+}
+/* 下方三個宗旨區 */
+.space-purpose-text{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* RWD設定 */
+
+@media screen and (max-width:1250px){
+    .space-purpose-container-image img{
+        width:55%;
+    }
+    .space-purpose-container{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:1050px){
+    .space-purpose-container-image{
+        margin-bottom: 2rem;
+    }
+    .space-purpose-text{
+        align-items: flex-start;
+    }
+    .space-purpose-container-text h1{
+        font-size: 40px;
+        line-height: 52px;
+    }
+}
+@media screen and (max-width:850px){
+    .space-purpose-container-text h1{
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .space-purpose-container-text p{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .space-purpose-text{
+        flex-direction: column;
+    }
+    .space-purpose-container-image{
+        margin-right: 0rem;
+    }
+    /* 頭像大小調整*/
+    .space-purpose-container-image img{
+        width:65%;
+    }
+    .space-purpose-container-image h3{
+        font-size: 24px;
+    }
+}
+@media screen and (max-width:550px){
+    .space-purpose{
+        padding: 4rem 2rem;
+    }
+    .space-purpose-container-image img{
+        width:75%;
+    }
+    .space-purpose-container-text h1{
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .space-purpose-container-text p{
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+@media screen and (max-width:400px){
+    /* .space-purpose-container-image img{
+        width:180px;
+    } */
+}

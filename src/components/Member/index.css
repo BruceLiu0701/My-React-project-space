@@ -1,0 +1,131 @@
+.space-member{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../../assets/navigation.jpg') no-repeat center center/cover;
+}
+/* 登入介面容器 */
+.space-member-login{
+    border: 1px solid #fff;
+    padding: 3rem 2.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    backdrop-filter: blur(4px);
+
+    width: 400px;
+}
+/* 會員登入標題區塊 */
+.space-member-login h3{
+    font-family: var(--font-mardrin);
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+
+    margin-bottom: 2rem;
+}
+
+/* E-mail區塊,密碼區 */
+.space-member-login-e-mail,
+.space-member-login-password{
+    width: 100%;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.space-member-login-password input,
+.space-member-login-e-mail input{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.space-member-login-e-mail span,
+.space-member-login-password span{
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    font-size: 18px;
+    transform-origin: center center;
+    transition: 0.4s;
+}
+.space-member-login-e-mail input:focus,
+.space-member-login-password input:focus{
+    outline: none;
+}
+.space-member-login-e-mail input:focus~span,
+.space-member-login-password input:focus~span{
+    transform: rotate(360deg);
+}
+
+/* checkbox區塊 */
+.space-member-login-checkbox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.space-member-login-checkbox label{
+    position: absolute;
+    left: 1.2rem;
+}
+.space-member-login-checkbox a:hover{
+    color:var(--color-login);
+}
+/* 按鈕區塊 */
+.space-member-btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.space-member-btn button{
+    font-family: var(--font-mardrin);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    background:linear-gradient(90deg, rgba(198, 17, 200, 1) 24%, rgba(52, 54, 100, 1) 100%);
+}
+.space-member-btn button:hover{
+    color: var(--color-login);
+}
+/* 點我註冊區 */
+.space-member-btn span{
+    cursor: pointer;
+}
+.space-member-btn span:hover{
+    color: var(--color-login);
+}
+
+/* RWD */
+@media screen and (max-width:550px){
+    .space-member-btn{
+        font-size: 15px;
+    }
+    .space-member-btn button{
+        font-size: 15px;
+        line-height: 20px;
+        padding: 0.5rem;
+    }
+    .space-member-login h3{
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .space-member-login{
+        padding: 3rem 2rem;
+    }
+}

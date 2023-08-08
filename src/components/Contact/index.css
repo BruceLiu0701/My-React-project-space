@@ -1,0 +1,153 @@
+.space-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background:var(--gradient-bg) ;
+}
+/* 容器 */
+.space-contact-container{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+}
+
+/* 聯絡我們 地點 購票資訊區塊*/
+.space-contact-item{
+    flex:1;
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-mardrin);
+}
+.space-contact-item h3{
+    position: relative;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.space-contact-item h3::after{
+    content:"";
+    border-bottom: 1px solid #fff;
+    width: 70%;
+    position: absolute;
+    margin: auto;
+    right:0;
+    left:0;
+    bottom: -0.75rem;
+}
+.space-contact-item p{
+    letter-spacing: 0.05rem;
+    font-size: 16px;
+}
+.space-contact-item p+p{
+    margin-top: 1rem;
+}
+.space-contact-item:nth-child(2) p:last-child{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-logo);
+}
+.space-contact-item:nth-child(2) p:nth-child(4){
+    cursor: pointer;
+}
+.space-contact-item:nth-child(2) p:nth-child(4):hover{
+    color: var(--color-login);
+}
+
+
+/* 聯絡我們icon區塊 */
+.space-contact-item:first-child p{
+    font-size: 16px;
+}
+.space-contact-item:first-child p:first-of-type{
+    font-size: 32px;
+}
+.space-contact-item:first-child p span{
+    cursor: pointer;
+}
+.space-contact-item:first-child p span:hover{
+    color: var(--color-login);
+}
+.space-contact-item:first-child p span+span{
+    margin-left: 1.2rem;
+}
+/* 星球崛起區塊 */
+.space-contact-icon{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.space-contact-icon p{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.space-contact-icon p span{
+    font-size: 36px;
+    line-height: 48px;
+}
+.space-contact-icon p span:hover{
+    color:#8CE600;
+    cursor: pointer;
+}
+
+/* RWD設定 */
+@media screen and (max-width:1050px){
+    .space-contact-container{
+        width: 80%;
+    }
+    .space-contact-icon{
+        width: 35%;
+    }
+}
+@media screen and (max-width:850px){
+    .space-contact-container{
+        width: 100%;
+    }
+    .space-contact-icon{
+        width: 50%;
+    }
+}
+@media screen and (max-width:650px){
+    .space-contact-container{
+        flex-direction: column;
+    }
+    .space-contact-item{
+        margin-bottom: 3rem;
+    }
+    .space-contact-item h3::after{
+        width: 55%;
+    }
+    .space-contact-item h3{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .space-contact-item p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+@media screen and (max-width:550px){
+    .space-contact-item h3::after{
+        width: 50%;
+    }
+    .space-contact-icon{
+        width: 65%;
+    }
+}
+@media screen and (max-width:450px){
+    .space-contact-item h3::after{
+        width: 60%;
+    }
+    .space-contact-icon p span{
+        font-size: 30px;
+        line-height: 40px;
+    }
+}

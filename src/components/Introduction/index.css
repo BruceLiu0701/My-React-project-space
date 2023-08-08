@@ -1,0 +1,116 @@
+.space-introduction{
+    height: 100vh;
+    background: url('../../assets/galaxy.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 左側圖片區 */
+.space-introduction-image{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.space-introduction-image img{
+    width: 450px;
+    height: 675px;
+}
+/* 右方文字區 */
+.space-introduction-text{
+    flex: 1.8;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    padding: 2rem 4rem;
+    backdrop-filter: blur(3px);
+    max-height: 100vh;
+    position: relative;
+}
+.space-introduction-text h2{
+    font-family: var(--font-mardrin);
+    font-size: 32px;
+    font-weight:700;
+    line-height: 40px;
+    color:var(--color-text);
+    margin-bottom: 1.2rem;
+}
+/* 文字區內星球介紹 */
+.space-introduction-text-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.space-introduction-text-content p{
+    font-family: var(--font-mardrin);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color:#fff;
+    text-shadow: 0 0 5px #000;
+}
+.space-introduction-text-content span{
+    display: inline-block;
+    font-family: var(--font-mardrin);
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 24px;
+    color:var(--color-text);
+    text-shadow:none;
+}
+
+/* RWD設定 */
+@media screen and (max-width:1250px){
+    .space-introduction-text h2{
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .space-introduction-text-content p{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .space-introduction-image{
+        display: none;
+    }
+}
+@media screen and (max-width:850px){
+
+    .space-introduction-text h2{
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .space-introduction-text-content p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .space-introduction-text-content span{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    /* .space-introduction-image{
+        display: flex;
+    } */
+}
+@media screen and (max-width:550px){
+    .space-introduction{
+        align-items: flex-start;
+        margin-bottom: 7rem;
+    }
+    .space-introduction-text{
+        padding: 2rem;
+        overflow: scroll;
+    }
+    .space-introduction-text h2{
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .space-introduction-text-content p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
