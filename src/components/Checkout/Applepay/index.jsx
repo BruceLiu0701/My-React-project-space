@@ -5,7 +5,7 @@ import './index.css'
 const Applepay=()=>{
     
     const changeState=()=>{
-        PubSub.publish('whichWay','applepay')
+        PubSub.publish('whichWay','applepay');
     }
     return(
         <div className="space-applepay">

@@ -5,7 +5,7 @@ import './index.css'
 const Bank=()=>{
     
     const changeState=()=>{
-        PubSub.publish('whichWay','bank')
+        PubSub.publish('whichWay','bank');
     }
     return(
         <div className='space-bank'>

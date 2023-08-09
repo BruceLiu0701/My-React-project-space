@@ -21,14 +21,14 @@ const Checkout=()=>{
             setPayment(data);
         })
         return ()=>{
-            PubSub.unsubscribe('whichWay')
+            PubSub.unsubscribe('whichWay');
         }
     })
     // 選擇付款方式的回調
     const selectWay=(way)=>{
-        if(way==='bank')navigate('bank')
-        else if(way==='applepay')navigate('applepay')
-        else navigate('credit')  
+        if(way==='bank')navigate('bank');
+        else if(way==='applepay')navigate('applepay');
+        else navigate('credit')  ;
     }
     // 暫存付款方式的回調
     const savePayment=(way)=>{
