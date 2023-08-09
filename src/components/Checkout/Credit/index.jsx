@@ -1,4 +1,5 @@
 import React,{useState,useRef} from 'react'
+import PubSub from 'pubsub-js';
 import Swal from 'sweetalert2';
 import './index.css'
 
@@ -55,9 +56,12 @@ const Credit=()=>{
         card[key]=value.trim();
         setCard({...card})
     }
+    // 改變是否選擇此信用卡的回調
     const checkRadio=()=>{
         radio.current.checked=!radio.current.checked;
+        if(radio.current.checked) PubSub.publish('whichWay','credit')
     }
+    // 送出信用卡資料的回調
     const regCheck=()=>{
 
         cardnum.lastIndex=0;
@@ -88,7 +92,7 @@ const Credit=()=>{
             Swal.fire({
                 icon: 'error',
                 title: '格式不符',
-                text: `請確認信箱或密碼格式是否輸入正確 !`,
+                text: `請確認卡片資料是否輸入正確 !`,
             })
         }  
     }

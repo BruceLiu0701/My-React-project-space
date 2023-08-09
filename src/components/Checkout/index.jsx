@@ -1,22 +1,67 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { Outlet,useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import PubSub from 'pubsub-js'
+import Swal from 'sweetalert2'
 import './index.css'
 
 const Checkout=()=>{
 
     const state=useSelector(state=>state.cart);
     const member=useSelector(state=>state.membership);
+    const [payment,setPayment]=useState('');
     const {ticket,departure,passenger,price}=state.information
     const navigate=useNavigate();
 
     const total=member.certificate[0]&&passenger&&price*passenger.length>=10000?(price*passenger.length)*95/100:price*passenger.length
+    
 
+    useEffect(()=>{
+        PubSub.subscribe('whichWay',(__,data)=>{
+            setPayment(data);
+        })
+        return ()=>{
+            PubSub.unsubscribe('whichWay')
+        }
+    })
     // 選擇付款方式的回調
     const selectWay=(way)=>{
-        if(way==='bank')navigate('bank');
-        else if(way==='applepay')navigate('applepay');
-        else navigate('credit');
+        if(way==='bank')navigate('bank')
+        else if(way==='applepay')navigate('applepay')
+        else navigate('credit')  
+    }
+    // 暫存付款方式的回調
+    const savePayment=(way)=>{
+        setPayment(way);
+    }
+    // 確認訂票按鈕的回調
+    const checkPayment=()=>{
+        if(payment&&ticket&&departure&&passenger){
+            Swal.fire({
+                title: '確認訂票嗎 ?',
+                text: "按下確認後訂票完成 !",
+                icon: 'warning',
+                showCancelButton: true,
+                cancelButtonText:'取消',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '確定'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                    '訂票成功',
+                    '請再做後續付款確認',
+                    'success',
+                    ) 
+                }
+            })
+        }else{
+            Swal.fire({
+                icon: 'error',
+                title: '訂票失敗',
+                text: `請確認購票資訊及付款方式是否已填寫完成 !`,
+            })
+        }
     }
     return(
         <section className='space-checkout section-padding'>
@@ -81,10 +126,10 @@ const Checkout=()=>{
                             <button onClick={()=>{selectWay('credit')}}>信用卡</button>
                         </div>
                     </div>
-                    <Outlet/>
+                    <Outlet savePayment={savePayment}/>
                     <p className='space-checkout-howtopay-totalprice'>總金額(含會員價折抵) : $ {total}</p>
                     <div className='space-checkout-howtopay-btn'>
-                        <button>確認訂票</button>
+                        <button onClick={checkPayment}>確認訂票</button>
                     </div>
                 </div>
             </div>
