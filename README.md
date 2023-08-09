@@ -11,7 +11,7 @@ https://my-react-project-space.vercel.app
 技術以及功能介紹:
 1. 此網站使用React框架完成建構前端部分
 2. 實現SPA(single page application)，使用react-router-dom技術，並配置路由表來統一管理路由
-3. 使用 redux toolkit 管理project中較為複雜的狀態
+3. 使用 redux toolkit 管理project中較為複雜的狀態，部分狀態使用訂閱消息(PubSub)的方式做數據傳遞
 4. 實現簡易註冊會員、︀會員登入以及會員中心功能，並使用 "正則表達式" 限制輸入內容是否符合要求，使用者需注意提示的部分
 5. 實現添加並同步旅程、︀出發地點以及購票資訊到購物車內的功能
 6. 購票資訊都填寫完成，即可由購物車進入結帳部分，提供付款方式選擇以及新增新的信用卡功能
