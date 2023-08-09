@@ -54,6 +54,7 @@ const Checkout=()=>{
                     'success',
                     ) 
                 }
+                navigate('/banner');
             })
         }else{
             Swal.fire({
