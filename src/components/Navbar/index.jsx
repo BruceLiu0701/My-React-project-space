@@ -27,7 +27,7 @@ const Navbar=()=>{
         <nav className='space-navbar'>
             <div className='space-navbar-logo'>
                 <Link to='/banner'><img src={logo} alt="logo" /></Link>
-                <p className='gradient-text'>Space tourism</p>
+                <p className='gradient-text'>Space Tourism</p>
             </div>
             <div className='space-navbar-links'>
                 <ul className='space-navbar-links-container'>

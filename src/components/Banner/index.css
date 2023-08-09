@@ -139,6 +139,15 @@
 }
 
 /* RWD設定 */
+@media screen and (max-width:1250px){
+    .space-banner-title-container h1{
+        font-size: 58px;
+        line-height: 70px;
+    }
+    .space-banner-title-container{
+        margin-right: 1.5rem;
+    }
+}
 @media screen and (max-width:1050px){
     .space-banner-title{
         flex-direction: column;
