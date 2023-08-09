@@ -286,7 +286,8 @@
     .space-checkout-ticket-container{
         display: block;
     }
-    .space-checkout-ticket{
+    .space-checkout-ticket,
+    .space-checkout-howtopay{
         padding: 2rem 1.5rem;
     }
 }

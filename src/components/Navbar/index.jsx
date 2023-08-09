@@ -10,7 +10,7 @@ import './index.css'
 
 const Navbar=()=>{
     
-    const [toggle,setToggle]=useState(false)  // 是否顯示
+    const [toggle,setToggle]=useState(false)  // 是否顯示手機版導覽列
     const [cart,setCart]=useState(false);     // 購物袋開關的狀態
 
 

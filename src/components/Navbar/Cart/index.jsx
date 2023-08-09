@@ -1,6 +1,5 @@
 import React,{memo} from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
 import { removeData } from '../../../features/cartSlice'
 import Swal from 'sweetalert2'
@@ -20,6 +19,13 @@ const Cart=({closeBag})=>{
         closeBag();
     }
     
+    // 重新選擇旅程 出發地點 購票者資訊的回調
+    const selectAgain=(way)=>{
+        if(way==='ticket')navigate('/journey/ticket')
+        else if (way==='departure')navigate('/journey/departure')
+        else navigate('/journey/passenger')
+        closeBag();
+    }
     const checkout=()=>{
         if(!ticket||!departure||!passenger){
             Swal.fire({
@@ -32,6 +38,7 @@ const Cart=({closeBag})=>{
         closeBag();
         navigate('/checkout')
     }
+
     const clearBag=()=>{
         Swal.fire({
             title: '確定清空購物袋嗎?',
@@ -62,12 +69,12 @@ const Cart=({closeBag})=>{
                 <div className='space-cart-ticket'>
                     <h4>您選擇的旅程 :</h4>
                     <p>{ticket||'尚未選擇旅程'}</p>
-                    <button><Link to='/journey/ticket'>重新選擇旅程</Link></button>
+                    <button onClick={()=>selectAgain('ticket')}>重新選擇旅程</button>
                 </div>
                 <div className='space-cart-departure'>
                     <h4>您選擇的出發地點 :</h4>
                     <p>{departure||'尚未選擇出發地點'}</p>
-                    <button><Link to='/journey/departure'>重新選擇出發地點</Link></button>
+                    <button onClick={()=>selectAgain('departure')}>重新選擇出發地點</button>
                 </div>
                 <div className='space-cart-passenger'>
                     <h4>旅客資訊</h4>
@@ -80,7 +87,7 @@ const Cart=({closeBag})=>{
                             }return ""
                         }):<p>尚未填寫旅客資料</p>}
                     </div>
-                    <button><Link to='/journey/passenger'>重新填寫旅客資料</Link></button>
+                    <button onClick={()=>selectAgain('passenger')}>重新填寫旅客資料</button>
                 </div> 
             </>}
             <div className='space-cart-price'>
