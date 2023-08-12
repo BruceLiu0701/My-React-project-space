@@ -12,8 +12,8 @@ const Passenger=()=>{
     const [data,setData]=useState([{}])     // 存放旅客資訊
     const navigate=useNavigate();
     const dispatch=useDispatch();
-    const enName=/^[A-Z][A-Z-\s]{5,25}$/g
-    const email=/^[A-z][A-z0-9_-]{1,}@[A-z0-9_-]+\.[A-z]{2,6}$|\.[a-z]{2}$/g
+    const enName=/^[A-Z][A-Z-\s]{3,25}$/g
+    const email=/^[A-z][A-z0-9_-]{1,}@[A-z0-9_-]+\.[A-z]{2,6}$|^[A-z][A-z0-9_-]{1,}@[A-z0-9_-]+\.[A-z]{2,6}\.[a-z]{2}$/g
     const nation=/^[A-Z][a-z]{1,}$/g
     const ppnumber=/^[A-z0-9][A-z0-9]{8}$/g
 

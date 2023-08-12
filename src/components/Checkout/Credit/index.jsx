@@ -59,7 +59,7 @@ const Credit=()=>{
     // 改變是否選擇此信用卡的回調
     const checkRadio=()=>{
         radio.current.checked=!radio.current.checked;
-        if(radio.current.checked) PubSub.publish('whichWay','credit')
+        if(radio.current.checked) PubSub.publish('whichWay','credit');
     }
     // 送出信用卡資料的回調
     const regCheck=()=>{

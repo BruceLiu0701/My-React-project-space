@@ -53,8 +53,8 @@ const Checkout=()=>{
                     '請再做後續付款確認',
                     'success',
                     ) 
+                    navigate('/banner');
                 }
-                navigate('/banner');
             })
         }else{
             Swal.fire({

@@ -7,7 +7,7 @@ import './index.css'
 const Showcase=()=>{
     
     const images=[showcase1,showcase2,showcase3]
-    const [photo,setPhoto]=useState({num:1,direction:true});
+    const [photo,setPhoto]=useState({num:1,direction:true});  // direction true代表點右邊 false代表點左邊
 
     const rightImage=(number)=>{
         if(photo.num+number>2) setPhoto({num:0,direction:true});
