@@ -54,7 +54,7 @@
 }
 /* 最下方Get started區塊 */
 .space-banner-start-btn{
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 .space-banner-start-btn button{
     background:var(--gradient-btn);
@@ -153,10 +153,10 @@
         flex-direction: column;
     }
     .space-banner-image{
-        margin-top: 5rem;
+        margin-top: 3rem;
     }
     .space-banner-title-container{
-        margin: 0;
+        margin: 3rem 0 0;
     }
 }
 @media screen and (max-width:750px){

@@ -122,6 +122,7 @@
     .space-departure-title p{
         font-size: 16px;
         line-height: 20px;
+        text-align: justify;
     }
     /* .space-departure-title button{
         font-size: 16px;
