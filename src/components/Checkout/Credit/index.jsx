@@ -20,7 +20,7 @@ const Credit=()=>{
     }
     // 刪除卡片的回調
     const removeCard=()=>{
-        if (yourCard){
+        if(yourCard){
             Swal.fire({
                 title: '確認刪除卡片嗎 ?',
                 text: "按下確認後刪除卡片 !",
@@ -33,22 +33,24 @@ const Credit=()=>{
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire(
-                    '已新增卡片成功',
+                    '已刪除卡片成功',
                     '',
                     'success',
                     ) 
+                    setCard({});
+                    setYourCard(false);
+                    return
                 }
-                setCard({});
-                setYourCard(false);
-                return
             })
+        }else{
+            Swal.fire({
+                icon: 'warning',
+                title: '沒有可刪除信用卡',
+                text: `請先新增信用卡喔 !`,
+            })
+    
         }
-        Swal.fire({
-            icon: 'warning',
-            title: '沒有可刪除信用卡',
-            text: `請先新增信用卡喔 !`,
-        })
-
+        
         
     }
     // 受控組件的回調
@@ -84,9 +86,10 @@ const Credit=()=>{
                     '',
                     'success',
                     ) 
+                    setAddCard(state=>!state)
+                    setYourCard(true)
                 }
-                setAddCard(state=>!state)
-                setYourCard(state=>!state)
+                
             })
         }else{
             Swal.fire({
