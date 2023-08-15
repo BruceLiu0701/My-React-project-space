@@ -13,7 +13,7 @@ const Navbar=()=>{
     const [toggle,setToggle]=useState(false)  // 是否顯示手機版導覽列
     const [cart,setCart]=useState(false);     // 購物袋開關的狀態
 
-
+    // 打開購物袋的回調
     const openBag=useCallback(()=>{           // 避免子組件不必要的重新渲染
         setCart(state=>!state);
         setToggle(state=>!state);

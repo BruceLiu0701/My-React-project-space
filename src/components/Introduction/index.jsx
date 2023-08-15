@@ -6,7 +6,7 @@ const Introduction=()=>{
     return(
         <header className='space-introduction section-padding'>
             <div className='space-introduction-image'>
-                <img src={solar} alt="" />
+                <img src={solar} alt="solar system" />
             </div>
             <article className='space-introduction-text'>
                 <h2>九大行星介紹</h2>

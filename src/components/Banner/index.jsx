@@ -6,6 +6,7 @@ import './index.css'
 const Banner=()=>{
 
     const navigate=useNavigate();
+    // get started的回調
     const goToJourney=()=>{
         navigate('/journey');
     }

@@ -13,7 +13,7 @@ const Checkout=()=>{
     const {ticket,departure,passenger,price}=state.information
     const navigate=useNavigate();
 
-    const total=member.certificate[0]&&passenger&&price*passenger.length>=10000?(price*passenger.length)*95/100:price*passenger.length
+    const total=member.certificate[0]&&passenger&&price*passenger.length>=10000 ? (price*passenger.length)*95/100 : price*passenger.length
     
 
     useEffect(()=>{
@@ -23,7 +23,7 @@ const Checkout=()=>{
         return ()=>{
             PubSub.unsubscribe('whichWay');
         }
-    })
+    },[])
     // 選擇付款方式的回調
     const selectWay=(way)=>{
         if(way==='bank')navigate('bank');
@@ -122,9 +122,9 @@ const Checkout=()=>{
                     <div className='space-checkout-howtopay-method'>
                         <h3>付款方式</h3>
                         <div className='space-checkout-howtopay-method-btn'>
-                            <button onClick={()=>{selectWay('bank')}}>銀行轉帳</button>
-                            <button onClick={()=>{selectWay('applepay')}}>Apple Pay</button>
-                            <button onClick={()=>{selectWay('credit')}}>信用卡</button>
+                            <button onClick={()=>selectWay('bank')}>銀行轉帳</button>
+                            <button onClick={()=>selectWay('applepay')}>Apple Pay</button>
+                            <button onClick={()=>selectWay('credit')}>信用卡</button>
                         </div>
                     </div>
                     <Outlet savePayment={savePayment}/>
