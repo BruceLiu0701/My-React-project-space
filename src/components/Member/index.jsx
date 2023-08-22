@@ -14,10 +14,11 @@ const Member=()=>{
     const {login,center}=state.membership            // login狀態用以更新註冊會員還是會員登入框, true表示會員登入框, center切換會員中心
 
     const dispatch=useDispatch();
-    const regEmail=/^[A-z][A-z0-9_-]{1,}@[A-z0-9_]+\.[A-z]{2,6}$|\.[a-z]{2}$/g;   //正則表達式
+    const regEmail=/^[A-z][A-z0-9_-]{1,}@[A-z0-9_]+\.[A-z]{2,6}$|^[A-z][A-z0-9_-]{1,}@[A-z0-9_]+\.[A-z]{2,6}\.[a-z]{2}$/g;   //正則表達式
     const regPassword=/^[A-z][A-z0-9_]{7,20}$/g;
 
-    console.log('userData',state.userData);
+    // console.log('userData',state.userData);
+
     // 登出的回調
     const handleLogout=()=>{
         dispatch(LogOut());

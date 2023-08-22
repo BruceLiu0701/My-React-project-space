@@ -1,8 +1,5 @@
-
+import {lazy} from 'react'
 import Banner from '../components/Banner'
-import Introduction from '../components/Introduction'
-import Member from '../components/Member'
-import Journey from '../components/Journey'
 import Ticket from '../components/Journey/Ticket'
 import Passenger from '../components/Journey/Passenger'
 import Departure from '../components/Journey/Departure'
@@ -11,6 +8,9 @@ import Bank from '../components/Checkout/Bank'
 import Applepay from '../components/Checkout/Applepay'
 import Credit from '../components/Checkout/Credit'
 import {Navigate} from 'react-router-dom'
+const Introduction=lazy(()=>import('../components/Introduction'))
+const Journey=lazy(()=>import('../components/Journey'))
+const Member=lazy(()=>import('../components/Member'))
 
 const routes=[
     {

@@ -1,5 +1,6 @@
-import React from 'react'
+import React,{Suspense} from 'react'
 import {useRoutes} from 'react-router-dom'
+import Loading from './components/Loading'
 import routes from './routes/routes'
 import Navbar from './components/Navbar'
 import Purpose from './components/Purpose'
@@ -13,7 +14,9 @@ const App=()=>{
     return(
         <div className='app'>
             <Navbar navbar={'navbar'}/>
-            {elements}
+            <Suspense fallback={<Loading/>}>
+                {elements}
+            </Suspense>
             <div className='totop'>
                 <a href="#top"><span className="material-symbols-outlined">rocket</span></a>
             </div>
