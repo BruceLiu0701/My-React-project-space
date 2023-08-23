@@ -11,7 +11,7 @@
 
 進入上方src資料夾
 1. assets :　此資料夾存放所有project中用到的圖片。
-2. components : 此資料夾存放所有project中用到的元件，命名以該組建的用途進行相關命名。
+2. components : 此資料夾存放所有project中用到的元件，命名以該元件的用途進行相關命名。
 3. features : 此資料夾存放redux toolkit中統一管理action以及reducer的各個狀態Slice。
 4. routes :　此資料夾內文件用以統一管理路由，能一目了然各路由的嵌套關係。
 5. store : 此資料夾存放redux toolkit的store，所有Slice都會由store統一管理。
