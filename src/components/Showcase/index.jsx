@@ -1,35 +1,45 @@
-import React,{useState,Fragment,memo} from 'react'
+import React,{useState,memo} from 'react'
 import showcase1 from '../../assets/showcase1.png'
-import showcase2 from '../../assets/showcase2.png'
-import showcase3 from '../../assets/showcase3.png'
+import showcase2 from '../../assets/showcase3.png'
+import showcase3 from '../../assets/showcase2.png'
+import showcase4 from '../../assets/showcase4.png'
+import showcase5 from '../../assets/showcase5.png'
 import './index.css'
 
 const Showcase=()=>{
     
-    const images=[showcase1,showcase2,showcase3]
-    const [photo,setPhoto]=useState({num:1,direction:true});  // direction true代表點右邊 false代表點左邊
-
-    const rightImage=(number)=>{
-        if(photo.num+number>2) setPhoto({num:0,direction:true});
-        else setPhoto({num:photo.num+number,direction:true});
+    const [changeImage,setChangeImage]=useState(3);
+    // 左右換頁按鈕的函式
+    const changePage=(num)=>{
+        if(changeImage+num>5)setChangeImage(1);
+        else if(changeImage+num<1)setChangeImage(5);
+        else setChangeImage(state=>state+num);
     }
-    const leftImage=(number)=>{
-        if(photo.num+number<0)setPhoto({num:2,direction:false});
-        else setPhoto({num:photo.num+number,direction:false})
+    // 下方小圓點跳到哪一頁面的函式
+    const selectPage=(page)=>{
+        setChangeImage(page);
     }
     return(
         <section className='space-showcase section-margin'>{
-            images.map((value,index)=>{
-                if(index===photo.num){
-                    return(
-                        <div key={index+value}> {/* 這邊圖片僅展示用, 目前沒有要添加新的圖片,暫時使用index代替  */}
-                            <img src={value} alt="" className={photo.direction?"scale-in-hor-left":"scale-in-hor-right"}/>
-                            <button onClick={()=>rightImage(1)}><span className="material-symbols-outlined">arrow_forward_ios</span></button>
-                            <button onClick={()=>leftImage(-1)}><span className="material-symbols-outlined">arrow_back_ios</span></button>
-                        </div>
-                    )
-                }return <Fragment key={index+value}></Fragment>
-            })    
+           
+            <div> {
+                changeImage===1?<img src={showcase1} alt="" />
+                :changeImage===2?<img src={showcase2} alt="" />
+                :changeImage===3?<img src={showcase3} alt="" />
+                :changeImage===4?<img src={showcase4} alt="" />
+                :<img src={showcase5} alt="" />
+            }
+                <button onClick={()=>changePage(1)}><span className="material-symbols-outlined">arrow_forward_ios</span></button>
+                <button onClick={()=>changePage(-1)}><span className="material-symbols-outlined">arrow_back_ios</span></button>
+                <div className="space-showcase-dot">
+                    <p style={{backgroundColor:changeImage===1?'#Fa0':'rgba(255,255,255,0.945)'}} onClick={()=>selectPage(1)}></p>
+                    <p style={{backgroundColor:changeImage===2?'#Fa0':'rgba(255,255,255,0.945)'}} onClick={()=>selectPage(2)}></p>
+                    <p style={{backgroundColor:changeImage===3?'#Fa0':'rgba(255,255,255,0.945)'}} onClick={()=>selectPage(3)}></p>
+                    <p style={{backgroundColor:changeImage===4?'#Fa0':'rgba(255,255,255,0.945)'}} onClick={()=>selectPage(4)}></p>
+                    <p style={{backgroundColor:changeImage===5?'#Fa0':'rgba(255,255,255,0.945)'}} onClick={()=>selectPage(5)}></p>
+                </div>
+            </div>
+    
         }   
         </section>
     )

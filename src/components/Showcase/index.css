@@ -14,6 +14,25 @@
 .space-showcase div img{
     width: 100%;
 }
+.space-showcase .space-showcase-dot{
+    position: absolute;    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    bottom: 2rem;
+    left: 50%;
+    border: none;
+    transform: translateX(-50%);   
+}
+.space-showcase .space-showcase-dot p{
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;    
+    cursor: pointer;
+}
+.space-showcase .space-showcase-dot p+p{
+        margin-left: 2.5rem;
+}
 
 /* 幻燈片按鈕區 */
 .space-showcase div button{
@@ -41,82 +60,6 @@
     color:var( --color-login) ;
 }
 
-/* 動畫區 */
-.scale-in-hor-left {
-	-webkit-animation: scale-in-hor-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: scale-in-hor-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-.scale-in-hor-right {
-	-webkit-animation: scale-in-hor-right 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: scale-in-hor-right 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@-webkit-keyframes scale-in-hor-left {
-    0% {
-      -webkit-transform: scaleX(0);
-              transform: scaleX(0);
-      -webkit-transform-origin: 0% 0%;
-              transform-origin: 0% 0%;
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scaleX(1);
-              transform: scaleX(1);
-      -webkit-transform-origin: 0% 0%;
-              transform-origin: 0% 0%;
-      opacity: 1;
-    }
-  }
-  @keyframes scale-in-hor-left {
-    0% {
-      -webkit-transform: scaleX(0);
-              transform: scaleX(0);
-      -webkit-transform-origin: 0% 0%;
-              transform-origin: 0% 0%;
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scaleX(1);
-              transform: scaleX(1);
-      -webkit-transform-origin: 0% 0%;
-              transform-origin: 0% 0%;
-      opacity: 1;
-    }
-  }
-
-
-  @-webkit-keyframes scale-in-hor-right {
-    0% {
-      -webkit-transform: scaleX(0);
-              transform: scaleX(0);
-      -webkit-transform-origin: 100% 100%;
-              transform-origin: 100% 100%;
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scaleX(1);
-              transform: scaleX(1);
-      -webkit-transform-origin: 100% 100%;
-              transform-origin: 100% 100%;
-      opacity: 1;
-    }
-  }
-  @keyframes scale-in-hor-right {
-    0% {
-      -webkit-transform: scaleX(0);
-              transform: scaleX(0);
-      -webkit-transform-origin: 100% 100%;
-              transform-origin: 100% 100%;
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scaleX(1);
-              transform: scaleX(1);
-      -webkit-transform-origin: 100% 100%;
-              transform-origin: 100% 100%;
-      opacity: 1;
-    }
-  }
 
 
 /* RWD設定 */
@@ -127,5 +70,8 @@
     .space-showcase div button span{
         font-size: 36px;
         line-height: 48px;
+    }
+    .space-showcase .space-showcase-dot{
+        display: none;
     }
 }
