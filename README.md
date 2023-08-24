@@ -29,4 +29,3 @@
 8. 部分組件使用React.memo及useCallback來避免不必要的重新渲染。
 9. 使用nanoid模組，來作為需要動態增加減少元素的陣列遍歷的key值。
 10. 使用lazyload，用戶點擊時才載入該組件，降低頁面剛掛載時的載入時間及減少載入後未使用到的網路資源。
-![begining button](https://github.com/BruceLiu0701/My-React-project-space/assets/130199748/61abb537-003c-48b7-ada5-5ef17ce242df)
