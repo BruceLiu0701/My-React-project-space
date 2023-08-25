@@ -35,3 +35,5 @@
 1.css樣式重構為scss(預處理器)文件，以增加代碼的可讀性即可維護性。
 2.加入Jest或是React Testing Library的test case。
 3.進一步對元件進行關注點分離，容器元件以及展示元件等的拆分。
+
+
