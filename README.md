@@ -39,5 +39,16 @@
 
 五、︀作品截圖 : 
 
-![newpage01](https://github.com/BruceLiu0701/My-React-project-space/assets/130199748/5fe71277-0955-4f4e-9118-0ca589c00c28)
+ ![newpage01](https://github.com/BruceLiu0701/My-React-project-space/assets/130199748/73d248f1-894c-494f-be20-913ca186e901)
+
+ ![newpage02](https://github.com/BruceLiu0701/My-React-project-space/assets/130199748/b174f105-dbf2-4d8d-a8d2-5989d9f9aded)
+
+ ![newpage03](https://github.com/BruceLiu0701/My-React-project-space/assets/130199748/3084036a-255e-4d83-9ec7-071472a0807e)
+
+ ![newpage04](https://github.com/BruceLiu0701/My-React-project-space/assets/130199748/f2ba5268-7fa4-4a5b-b738-f76b84ec1c84)
+
+ ![newpage05](https://github.com/BruceLiu0701/My-React-project-space/assets/130199748/8879f706-67b0-42a2-91fd-ef1d69275287)
+
+ ![newpage06](https://github.com/BruceLiu0701/My-React-project-space/assets/130199748/a7f8d5bc-91c7-4263-838f-e7b88ddb7a67)
+
 
